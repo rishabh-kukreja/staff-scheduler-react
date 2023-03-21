@@ -3,14 +3,14 @@ import React from "react";
 function LoadTable(props) {
   const { schedule } = props;
 
-  // define a function to calculate the load for each staff member in a given day
+  // function to calculate the load for each staff member in a given day
   const calculateLoad = (day, staffMember) => {
     const staffSchedule = Object.values(schedule[day]);
     const load = staffSchedule.filter((slot) => slot === staffMember).length;
     return load;
   };
 
-  // define a function to calculate the total load for each staff member in the week
+  // function to calculate the total load for each staff member in the week
   const calculateTotalLoad = (staffMember) => {
     let totalLoad = 0;
     Object.keys(schedule).forEach((day) => {

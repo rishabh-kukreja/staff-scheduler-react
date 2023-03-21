@@ -3,7 +3,7 @@ import ScheduleTable from "./ScheduleTable";
 import LoadTable from "./LoadTable";
 
 function App() {
-  // define state for the scheduled staff members
+  // state for the scheduled staff members
   const [staffMembers, setStaffMembers] = useState([
     "X1",
     "X2",
@@ -76,25 +76,6 @@ function App() {
     },
   });
 
-  // define function to update the scheduled staff members
-  // const handleScheduleUpdate = (day, timeSlot, staffMember) => {
-  //   // check if staff member is already scheduled for a lunch slot on the same day
-  //   if (timeSlot.includes('lunch')) {
-  //     const otherLunchSlots = Object.keys(schedule[day]).filter(slot => slot.includes('lunch') && slot !== timeSlot);
-  //     if (otherLunchSlots.some(slot => schedule[day][slot] === staffMember)) {
-  //       alert('Staff member cannot be scheduled for consecutive lunch slots on the same day.');
-  //       return;
-  //     }
-  //   }
-  //   // update the schedule state with the selected staff member
-  //   setSchedule((prevSchedule) => ({
-  //     ...prevSchedule,
-  //     [day]: {
-  //       ...prevSchedule[day],
-  //       [timeSlot]: staffMember,
-  //     },
-  //   }));
-  // };
   const handleScheduleUpdate = (day, timeSlot, staffMember) => {
     // check if staff member has more than 7 shifts for the week
     const staffMemberShifts = Object.values(schedule)
@@ -118,14 +99,6 @@ function App() {
         return;
       }
     }
-    // const slotsOnDay = Object.keys(schedule[day]);
-    // const otherSlots = slotsOnDay.filter((slot) => slot !== timeSlot);
-    // if (otherSlots.some((slot) => schedule[day][slot] === staffMember)) {
-    //   alert(
-    //     "Staff member cannot be scheduled for two slots at the same time on the same day."
-    //   );
-    //   return;
-    // }
 
     const morningSlots = [
       "morningUpstairs",
@@ -157,7 +130,7 @@ function App() {
       return;
     }
 
-    // update the schedule state with the selected staff member
+    // updated the schedule state with the selected staff member
     setSchedule((prevSchedule) => ({
       ...prevSchedule,
       [day]: {
