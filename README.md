@@ -1,7 +1,5 @@
 # Staff Scheduler
 
-A short description of the project.
-
 ## Getting Started
 
 ### Prerequisites
