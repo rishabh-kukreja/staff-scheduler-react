@@ -43,3 +43,5 @@ A short description of the project.
   7. ReactJS page prevents – or displays warning – when a staff member has more than 7 shifts per week
   8. ReactJS page prevents – or displays warning – when a staff member is selected to be in two places at once. (eg: UpStairs and Parking Lot)
 ```
+![image](https://user-images.githubusercontent.com/52663336/226506503-88a51347-80ac-425f-abf6-aac2758cd03d.png)
+
